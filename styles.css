@@ -178,11 +178,6 @@ section {
 }
 
 
-
-
-
-
-
 .experiencecont {
     
     border: solid;
@@ -491,4 +486,43 @@ section {
         animation: slideInFromRight 1s forwards;
     }
     
+
+
     
+
+    .extra-cont{
+
+height:300px;
+width:400px;
+display:flex;
+flex-direction:column;
+
+    }
+
+    .extra{
+
+
+        display:flex;
+
+        align-items: center;
+        justify-content: center;
+
+text-align:center;
+
+padding-bottom:200px;
+
+
+    }
+
+
+    #extra.animate {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    
+    /* Initial state before animation starts */
+    .extra {
+        opacity: 0;
+        transform: translateY(50px);
+    }
