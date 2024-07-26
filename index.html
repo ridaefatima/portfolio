@@ -16,6 +16,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#extra">Extra</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -143,21 +144,36 @@
                         <div class="swiper-button-prev"></div>
                         </div>
                         </section>
-                        <section id="contact">
-                            <div class="formflex">
-                                <div class="form">
-                                    <form action="https://formspree.io/f/xrbzejgw" method="POST">
-                                        <h1>Contact Me</h1>
-                                        <label for="name" class="stylish">Name:</label>
-                                        <input type="text" id="nme" name="name" required><br><br>
-                                        <label for="email" class="stylish">Email:</label>
-                                        <input type="email" id="email" name="email" required><br><br>
-                                        <label for="message" class="stylish">Message:</label>
-                                        <textarea id="message" name="message" rows="1" required></textarea><br><br>
-                                        <button type="submit" class="butt">Send Message</button>
-                                    </form>
-                                </div>
-                            </div><br>
+                        
+
+                            <section id="extra" class="extra">
+                                <div class="extra-cont">
+                                <h1>Extra</h1>
+                                <h2>Inspiration</h2>
+                               <p>My aspiration to become a computer engineer is deeply rooted in my fascination with how technology has the power to redefine entire eras. Witnessing the transformative impact of innovations—from the dawn of the internet to the rise of artificial intelligence—has shown me how technology can revolutionize daily life, reshape industries, and drive societal progress. </p> 
+    <h2>Future Plans</h2>
+    
+    <p>As a second-year student at Toronto Metropolitan University (TMU), Ontario, Canada, my immediate goal is to acquire comprehensive skills in full-stack development. I am passionate about the ability to independently create and manage applications. Following the completion of my bachelor’s degree, I intend to further my expertise by specializing in artificial intelligence (AI), aiming to contribute to advancements in this cutting-edge field.</p>
+    </div> 
+    
+    
+                            </section>
+
+                            <section id="contact">
+                                <div class="formflex">
+                                    <div class="form">
+                                        <form action="https://formspree.io/f/xrbzejgw" method="POST">
+                                            <h1>Contact Me</h1>
+                                            <label for="name" class="stylish">Name:</label>
+                                            <input type="text" id="nme" name="name" required><br><br>
+                                            <label for="email" class="stylish">Email:</label>
+                                            <input type="email" id="email" name="email" required><br><br>
+                                            <label for="message" class="stylish">Message:</label>
+                                            <textarea id="message" name="message" rows="1" required></textarea><br><br>
+                                            <button type="submit" class="butt">Send Message</button>
+                                        </form>
+                                    </div>
+                                </div><br>
 
                             <div class="contacts">
                                 <div class="contacts-c">
@@ -173,7 +189,9 @@
                                 </div>
                             </div>
                         </section>
-                       
+
+
+                        
                         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
                         
                         <script>
@@ -261,6 +279,22 @@
             experienceContainers.forEach(container => {
                 observer.observe(container);
             });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const extraSection = document.querySelector('#extra');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    } else {
+                        entry.target.classList.remove('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(extraSection);
         });
                         </script>
                         
